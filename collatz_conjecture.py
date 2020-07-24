@@ -18,3 +18,5 @@ def calc(n):
     a = (n * 3) + 1
     cache[n] = a
     return calc(a)
+
+calc(n)
