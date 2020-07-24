@@ -9,7 +9,7 @@ def calc(n):
   if n == 1:
     return n
   elif n in cache:
-    return n
+    return cache[n]
   elif n % 2 == 0:
     a = n/2
     cache[n] = a
