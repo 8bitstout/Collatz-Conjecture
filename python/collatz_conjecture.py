@@ -1,15 +1,16 @@
 # Python implementation of Collatz conjecture using recursion and memoizatoin
-
-n = int(input('Enter a number: ')) 
-
 cache = dict()
+
+n = input('Enter a number: ')
+
+n = int(n)
 
 def calc(n):
   print(n)
   if n == 1:
     return n
   elif n in cache:
-    return cache[n]
+    return calc(cache[n])
   elif n % 2 == 0:
     a = n/2
     cache[n] = a
